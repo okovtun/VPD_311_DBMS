@@ -11,6 +11,10 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DML", "DML\DML.ssmssqlproj"
 EndProject
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Transact-SQL", "Transact-SQL\Transact-SQL.ssmssqlproj", "{D76BD969-6724-4D5F-8D3C-63D0C7122CD7}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ScheduleFunctions", "ScheduleFunctions\ScheduleFunctions.ssmssqlproj", "{6A4C5A0A-9D88-4EF8-9237-918B60F91819}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Holidays", "Holidays\Holidays.ssmssqlproj", "{3CC10583-FB97-4957-88CB-227B22F9DC5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
@@ -18,9 +22,11 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{74E63BC7-48FD-4BAB-A7C8-1CFD7CA1782F}.Default|Default.ActiveCfg = Default
 		{D1E28649-1A2F-4342-A015-87BDCC6766BC}.Default|Default.ActiveCfg = Default
-		{27232AEA-BD2C-452E-9D9A-D53C44F9EFA0}.Default|Default.ActiveCfg = Default
 		{484B6E60-4F6B-49BA-8F0D-743F46228204}.Default|Default.ActiveCfg = Default
 		{D76BD969-6724-4D5F-8D3C-63D0C7122CD7}.Default|Default.ActiveCfg = Default
+		{6A4C5A0A-9D88-4EF8-9237-918B60F91819}.Default|Default.ActiveCfg = Default
+		{A737543C-39EF-4246-9B9E-412350B8157F}.Default|Default.ActiveCfg = Default
+		{3CC10583-FB97-4957-88CB-227B22F9DC5E}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

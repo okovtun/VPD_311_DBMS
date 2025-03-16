@@ -40,24 +40,14 @@ BEGIN
 		PRINT(@time);
 	
 		SET @time = @start_time
-		IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [group]=@group AND discipline=@discipline AND [date]=@date AND [time]=@time)
-		BEGIN
-			INSERT	Schedule
-					([group], discipline, teacher, [date], [time], spent)
-			VALUES	(@group, @discipline, @teacher,@date, @time, IIF(@date < GETDATE(), 1, 0));
-		END
+		EXEC sp_InsertLessonToSchedule @group, @discipline, @teacher, @date, @time;
 		SET	@lesson_number = @lesson_number+1;
 		
 		-------------------------------------------------------------------------------------
 		SET @time = DATEADD(MINUTE, 95, @time);
 		PRINT(@lesson_number+1);
 		PRINT(@time);
-		IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [group]=@group AND discipline=@discipline AND [date]=@date AND [time]=@time)
-		BEGIN
-			INSERT	Schedule
-					([group], discipline, teacher, [date], [time], spent)
-			VALUES	(@group, @discipline, @teacher,@date, @time, IIF(@date < GETDATE(), 1, 0));
-		END
+		EXEC sp_InsertLessonToSchedule @group, @discipline, @teacher, @date, @time;
 
 		SET @time = DATEADD(MINUTE, 190, @time);
 		PRINT(@lesson_number+1);
@@ -65,12 +55,7 @@ BEGIN
 		SET @lesson_number = @lesson_number + 1;
 		
 		-------------------------------------------------------------------------------------
-		IF NOT EXISTS (SELECT lesson_id FROM Schedule WHERE [group]=@group AND discipline=@discipline AND [date]=@date AND [time]=@time)
-		BEGIN
-			INSERT	Schedule
-					([group], discipline, teacher, [date], [time], spent)
-			VALUES	(@group, @discipline, @teacher,@date, @time, IIF(@date < GETDATE(), 1, 0));
-		END
+		EXEC sp_InsertLessonToSchedule @group, @discipline, @teacher, @date, @time;
 		SET @lesson_number = @lesson_number + 1;
 		PRINT('-----------------------------------');
 		SET @date = DATEADD(WEEK, 1, @date);

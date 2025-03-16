@@ -5,6 +5,21 @@ Functions vs Procedures:
 https://stackoverflow.com/questions/1179758/function-vs-stored-procedure-in-sql-server
 
 TODO:
+1. При выставлении расписания предусмотреть каникулы и праздники:
+	- Новогодние каникулы - ровно 2 недели;
+	- 23 Февраля;
+	- 8 Марта;
+	- Пасха - 3 дня;
+	- Майские праздники - 10 дней;
+	- Летние каникулы - 14 дней (последняя неделя июля, и первая неделя августа);
+2. Почитать
+	https://habr.com/ru/companies/edison/articles/269789/
+	https://www.atlassian.com/ru/agile
+	https://agilemanifesto.org/
+	https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-US.pdf
+	https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Russian.pdf
+
+DONE:
 1. ***Подсчитать в одном запросе количество групп и количество студентов для каждого направления;
 2. Подсчитать количество преподавателей по каждой дисциплине;
 3. Для каждого преподавателя вывести количество дисциплин, которые он может читать;
